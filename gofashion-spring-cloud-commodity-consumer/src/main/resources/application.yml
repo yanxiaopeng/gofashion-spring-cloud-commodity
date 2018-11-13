@@ -1,0 +1,18 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: gofashion-cloud-commodity-consumer
+  zipkin:
+    base-url: http://116.62.167.249:6601
+  sleuth:
+    sampler:
+      percentage: 1.0
+---
+eureka:
+  client:
+    service-url:
+      defaultZone: http://47.100.246.114:6001/eureka/
+feign:
+  hystrix:
+    enabled: true
